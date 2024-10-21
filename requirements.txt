@@ -1,0 +1,22 @@
+# Interactive Python
+ipykernel
+jupyterlab
+
+# Data Manipulation
+numpy==1.26
+pandas
+pandas-ta
+scipy
+
+# Data Visualization
+matplotlib
+seaborn
+plotly
+dash
+# dash_component_bootstrap
+
+# Finance & Backtesting
+yfinance
+backtrader
+backtesting
+
