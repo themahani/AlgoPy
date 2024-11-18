@@ -27,11 +27,12 @@ fi
 cd $WORKING_DIR;
 
 # Create the virtual environment
-if [[ -d "$WORKING_DIR/$VENV_NAME" ]]
+if [[ ! -d "$WORKING_DIR/$VENV_NAME" ]]
 then
     $PYTHON -m venv $VENV_NAME;
     # Switch to the newly created Python env
     source "$VENV_NAME/bin/activate";
+    echo "$(which python)";
     # Install required packages using pip
     pip install -r "$WORKING_DIR/requirements.txt";
 fi
