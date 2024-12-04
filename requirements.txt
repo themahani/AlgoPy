@@ -21,3 +21,9 @@ yfinance
 backtrader
 backtesting
 
+# ML Libraries
+scikit-learn
+torch
+torchvision
+tensorflow
+
