@@ -1,0 +1,42 @@
+---
+name: quant
+channels:
+  - conda-forge
+  - nvidia
+  - pytorch
+  - nodefaults
+dependencies:
+  - python=3.11
+  - ipykernel
+  - jupyterlab
+  - tqdm
+  - mamba
+
+  # Data manipulation
+  - pandas
+  - pandas-ta
+  - numpy=1.26
+  - scipy
+
+  # Data Visualization
+  - matplotlib
+  - seaborn
+  - plotly
+  - bokeh
+
+  # Finance & Backtesting
+  - yfinance
+
+  # Machine Learning Libraries
+  - scikit-learn
+  - pytorch
+  - torchvision
+  - tensorflow
+
+  # Pip-Only packages
+  - pip
+  - pip:
+    - dash
+    - dash_bootstrap_components
+    - backtrader
+    - backtesting
