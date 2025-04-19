@@ -1,4 +1,33 @@
 import backtrader as bt
+import yfinance as yf
+import pandas as pd
+
+
+def load_data(tickers: list[str], yf_params: dict):
+    datas = dict()
+    for name in tickers:
+        datas[name] = yf.download(tickers=name, **yf_params)
+
+    dt_col = "Datetime" if yf_params["interval"] == "4h" else "Date"
+
+    for name, data in datas.items():
+        data.reset_index(inplace=True)
+        data[dt_col] = pd.to_datetime(data[dt_col])
+        print(f"{name}: from {data[dt_col].iloc[0]} to {data[dt_col].iloc[-1]}")
+    data_feeds = dict()
+    for name, data in datas.items():
+        data_feeds[name] = bt.feeds.pandafeed.PandasData(
+            name=name,
+            dataname=data,
+            datetime=0,
+            openinterest=-1,
+            open=1,
+            high=2,
+            low=3,
+            close=4,
+            volume=5,
+        )
+    return data_feeds
 
 
 def log_results(data_name: str, results) -> None:
