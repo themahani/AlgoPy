@@ -4,7 +4,7 @@ jupyterlab
 tqdm
 
 # Data Manipulation
-numpy==1.26
+numpy
 pandas
 pandas-ta
 scipy
@@ -23,7 +23,4 @@ backtesting
 
 # ML Libraries
 scikit-learn
-torch
-torchvision
-tensorflow
 

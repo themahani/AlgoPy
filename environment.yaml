@@ -6,7 +6,7 @@ channels:
   - pytorch
   - nodefaults
 dependencies:
-  - python=3.11
+  - python=3.12
   - ipykernel
   - jupyterlab
   - tqdm
@@ -15,7 +15,7 @@ dependencies:
   # Data manipulation
   - pandas
   - pandas-ta
-  - numpy=1.26
+  - numpy
   - scipy
 
   # Data Visualization
